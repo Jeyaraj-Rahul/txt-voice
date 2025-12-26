@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>PDF to Voice</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+</head>
+<body>
+
+    <h2>PDF to Voice Converter</h2>
+
+    <form method="POST" enctype="multipart/form-data">
+        
+        <label>Upload PDF:</label><br>
+        <input type="file" name="pdf" required><br><br>
+
+        <label>Select Voice:</label><br>
+        <select name="voice">
+            <option value="male">Male</option>
+            <option value="female">Female</option>
+        </select><br><br>
+
+        <label>Speech Speed:</label><br>
+        <select name="speed">
+            <option value="120">Slow</option>
+            <option value="160" selected>Normal</option>
+            <option value="200">Fast</option>
+        </select><br><br>
+
+        <button type="submit">Convert to Audio</button>
+
+    </form>
+
+</body>
+</html>
