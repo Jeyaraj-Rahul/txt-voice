@@ -10,7 +10,8 @@ COPY templates ./templates
 COPY static ./static
 
 # Install Python dependencies
-RUN pip install --no-cache-dir flask pyttsx3 PyPDF2
+RUN pip install --no-cache-dir flask PyPDF2 gTTS
+
 
 # Expose port 5000
 EXPOSE 5000
